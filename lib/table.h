@@ -51,6 +51,7 @@ public:
 class table
 {
 public:
+    table(const string &dom_path, const string &dat_path, bool func1);
 	table(const string&, bool);
 	table();
 	~table();

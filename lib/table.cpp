@@ -1,8 +1,11 @@
 #include "table.h"
 
-table::table(const string& dataset, bool func1) : func(func1) {
+table::table(const string& dataset, bool func1) : table(dataset + ".domain", dataset + ".dat", func1) {
+}
+
+table::table(const string& dom_path, const string& dat_path, bool func1) : func(func1) {
 	// read domain
-	ifstream fdomain(dataset + ".domain");
+	ifstream fdomain(dom_path);
 
 	string s;
 	while (getline(fdomain, s)) {
@@ -20,7 +23,7 @@ table::table(const string& dataset, bool func1) : func(func1) {
 
 
 	// read data
-	ifstream fdata(dataset + ".dat");
+	ifstream fdata(dat_path);
 
 	string value;
 	vector<int> tuple;
