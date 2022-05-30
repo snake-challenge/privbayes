@@ -26,7 +26,7 @@ bayesian::bayesian(engine& eng1, table& tbl1, double ep, double theta) : base(en
 
 	model = greedy(0.5 * ep);
 	addnoise(0.5 * ep);
-	sampling(tbl.size());
+//	sampling(tbl.size());
 }
 
 bayesian::~bayesian() {
