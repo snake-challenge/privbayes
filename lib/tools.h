@@ -3,6 +3,8 @@
 #include <algorithm>
 #include <numeric>
 #include <set>
+#include <cmath>
+
 using namespace std;
 
 class tools
