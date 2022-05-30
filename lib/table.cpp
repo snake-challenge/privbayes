@@ -329,3 +329,19 @@ void table::printo_libsvm(const string& filename, int col, const set<int>& posit
 	}
 	fsvm.close();
 }
+
+void table::printo_file(const string& filename) {
+    ofstream fsvm(filename);
+    for (const auto& tuple : data) {
+        string output;
+
+        for (int t = 0; t < dim; t++) {
+            if (t) {
+                output += "\t";
+            }
+            output += translators[t]->int2str(tuple[t]);
+        }
+        fsvm << output << endl;
+    }
+    fsvm.close();
+}

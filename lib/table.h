@@ -83,7 +83,7 @@ public:
 	vector<pair<int, int>> specialize(const vector<int>&, const vector<int>&, const vector<int>&);			// val, col, from_lvl (to 0);
 
 	void printo_libsvm(const string&, int, const set<int>&);
-
+    void printo_file(const string &filename);
 
 	bool func;								// binary model
 	int dim;
